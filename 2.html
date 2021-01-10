@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #grid {
+            display: grid;
+            grid-template-rows: 50px 1fr;
+        }
+        #subgrid_title {
+            display: grid;
+            grid-template-columns: 170px 2fr 1fr;
+            border-bottom: 1px solid grey;
+        }
+        #subgrid_main {
+            display: grid;
+            grid-template-columns: 170px 1fr;
+        }
+        #subgrid_left {
+            padding-left: 10px;
+            border-left: 1px solid grey;
+            border-right: 1px solid grey;
+        }
+        #subgrid_right {
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+        }
+        #subsub {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        input[type='checkbox'] {
+            filter:grayscale(1);
+            margin-top: 10px;
+            margin-left: 14px;
+        }
+        table {
+            border-radius: 5px;
+            width: 100%;
+            height: auto;
+        }
+        table, th, td{
+            /* border-left: 1px solid grey;
+            border-right: 1px solid grey; */
+            margin: 0px;
+            padding: 10px;
+        }
+        tr{
+            height: 40px;
+        }
+        td {
+            width: 33%;
+        }
+        .odd {
+            background-color: #c0bebb;
+        }
+        .even {
+            background-color: #f0ede8;
+        }
+        #login {
+            border: 3px solid black;
+            width: 500px;
+            padding:10%;
+        }
+        input[type=text], input[type=password] {
+            width: 100%;
+            height: 50px;
+            margin: 10px;
+            border: #e7e7e7;
+            border-radius: 5px;
+            background-color: #e7e7e7;
+            padding-left: 20px;
+        }
+        button {
+            background-color: cornflowerblue;
+            border: none;
+            cursor: pointer;
+            width: 520px;
+            height: 50px;
+            margin: 10px;
+            border-radius: 5px;
+            padding-left: 20px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div id="grid">
+        <div id="subgrid_title">
+            <h6>관리자페이지</h6>
+            <h2>텍스트내용</h2>
+            <h5 style="text-align: right;">오른쪽정렬된텍스트</h5>
+        </div>
+        <div id="subgrid_main">
+            <div id="subgrid_left">
+                <p style="font-size: larger;"><b>멤버관리</b></p>
+                <p style="left: 15px; position: relative;">Some text</p>
+            </div>
+            <div id="subgrid_right">
+                <div id="subsub">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/440px-Image_created_with_a_mobile_phone.png" style="width: 100%; height: auto;">
+                    <p style="text-align: center;">이 텍스트는 가운데 정렬</p>
+                </div>
+                <div style="line-height: 200px; text-align: center;">
+                    <p>이 텍스트는 수직 수평 가운데 정렬</p>
+                </div>
+
+                <form>
+                    <div style="margin-left: 20px;" id="login">
+                        <p style="font-size: xx-large; color:cornflowerblue; margin-left:10px;">
+                            <b>ACCOUNT LOGIN</b></p>
+    
+                        <input type="text" placeholder="Name" id="username" name="username">
+                        <input type="password" placeholder = "password">
+
+                        <span style="width: 550px;">
+                            <input type="checkbox">
+                            <p style="display: inline; font-size: smaller;">Remember me?</p>
+                            <p style="display: inline; font-size: smaller; color: cornflowerblue; margin-left: 270px;">&nbspForgot Password?</p>
+                        </span>
+
+                        <button type="button" style="display: block; color: whitesmoke;">LOG IN</button>
+                        
+                    </div>
+
+                </form>
+                
+                <div style="margin: 10px;">
+                    <p>왼쪽 정렬된 멤버 테이블 텍스트</p>
+                    <table id="table">
+                        <tr style="text-align: center; background-color: rgb(145, 137, 129);" >
+                            <th colspan="3">DATA TABLE</th>
+
+                        </tr>
+                        <tr style="text-align: center; background-color: grey;">
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Birth</th>
+                        </tr>
+                        <tr class="odd">
+                            <td>김제니</td>
+                            <td>24</td>
+                            <td>981212</td>
+                        </tr>
+                        <tr class="even">
+                            <td>12341234</td>
+                            <td>38</td>
+                            <td>750101</td>
+                        </tr>
+                        <tr class="odd">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="even">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+</body>
+</html>
